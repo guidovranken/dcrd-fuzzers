@@ -60,7 +60,6 @@ func dcrd_ExtractPKScriptAddrs(input []byte) {
 }
 
 func Fuzz(input []byte) {
-    /* dcrd */
     if dcrd_txscript.IsMultisigSigScript(input) {
         dcrd_txscript.MultisigRedeemScriptFromScriptSig(input)
         /* Crashes 31-08-2018 dcrd_txscript.GetMultisigMandN(input) */

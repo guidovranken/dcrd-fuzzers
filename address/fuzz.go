@@ -7,7 +7,6 @@ import (
 )
 
 func Fuzz(input []byte) {
-    /* dcrd */
     {
         addr, err := dcrd_util.DecodeAddress(string(input))
         if err == nil {
